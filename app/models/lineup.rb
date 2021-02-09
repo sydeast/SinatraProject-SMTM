@@ -1,0 +1,3 @@
+class Lineup
+    
+end
