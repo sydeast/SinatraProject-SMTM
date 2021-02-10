@@ -3,9 +3,7 @@ ENV['SINATRA_ENV'] ||= "development"
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
-connection_details = YAML::load(File.open('config/databases.yml'))
-
-ActiveRecord::Base.establish_connection(connection_details)
+set :database_file, "./databases.yml"
 
 
 require './app/controllers/application_controller'
