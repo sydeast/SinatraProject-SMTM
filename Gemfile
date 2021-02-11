@@ -12,6 +12,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'corneal'
 gem 'bcrypt'
+gem 'bootstrap'
 
 
 group :test do

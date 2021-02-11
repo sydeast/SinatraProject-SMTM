@@ -2,15 +2,58 @@
 <html>
     <head>
         <title>Show Me The Money - All Stars</title>
+        <!--Styles-->
+        <link rel="stylesheet" href="/css/bootsrap.css" />
+        <link rel="stylesheet" href="/css/bootsrap-responsive.css" />
+        <style>
+            body {
+                padding-top: 60px;
+                /* When using the navbar-top-fixed */
+            }
+
+            .center {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .centercontents {
+                text-align: center !important;
+            }
+
+            .alignrightcontents {
+                text-align: right !important;
+            }
+        </style>
     </head>
-
     <body>
-
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/home">Show Me The Money <img src="/img/SMTM_home.jpg"></a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="/lineup">Lineups</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div><!-- /.nav-collapse -->
+                </div><!-- /.container -->
+            </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
         <%= yield %>
 
-
+    <!-- Bootstrap jQuery Plugins-->
+    <script src="/js/bootstrap.min.js"></script>
     </body>
 
 
-
+    <footer class="branding">
+        <small>&copy; 2020 <strong>Made by Somi</strong></small>
+    </footer>
 </html>
