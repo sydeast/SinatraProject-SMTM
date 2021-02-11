@@ -35,7 +35,10 @@ class App < Sinatra::Base
 
   #   redirect '/home'
   # end
-
+  get "/artists" do
+    @artists = Artist.all
+      erb :"artists/index"
+  end
 
   get '/back' do
     redirect back

@@ -1,0 +1,24 @@
+<h1>All Previous Winners and Runner-ups</h1>
+
+<% @artists.each do |artist| %>
+    <li>
+        <img src="<%= artist.photo_url%>">
+        <a href="<%=artist.profile_url %>">
+            <%=artist.name %>
+        </a>
+        <%=artist.season%>
+        <%=artist.placed%>
+
+    <% end %>
+
+
+    <!-- if artist.ready_only
+    <img src="<%= artist.photo_url%>">
+    <a href="<%=artist.profile_url %>">
+        <%=artist.name %>
+    else
+    <img src="<%= artist.photo_url%>">
+    <a href="artists/<%=/artist.id %>">
+        <%=artist.name %>
+        </a> -->
+
