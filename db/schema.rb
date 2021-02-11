@@ -10,27 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
-
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-    t.boolean "previous_contestant"
-    t.string "photo_url"
-    t.boolean "read_only"
-  end
-
-  create_table "lineups", force: :cascade do |t|
-    t.integer "user_id"
-  end
-
-  create_table "thrus", force: :cascade do |t|
-    t.integer "lineup_id"
-    t.integer "artist_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

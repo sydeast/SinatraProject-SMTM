@@ -11,6 +11,7 @@ gem 'thin'
 gem 'shotgun'
 gem 'pry'
 gem 'corneal'
+gem 'bcrypt'
 
 
 group :test do
