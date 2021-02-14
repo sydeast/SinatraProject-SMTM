@@ -11,9 +11,6 @@ class App < Sinatra::Base
       erb :home
   end
 
-  get '/home' do
-    erb :home
-  end
 
   # post '/login' do
   #   @user = User.find_by(:email => params[:email])

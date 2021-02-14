@@ -18,25 +18,40 @@ class UserController < App
     user = User.find_by(:email => params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/home'
+      redirect 'users/show'
     else
-        redirect to '/error'
+        erb :error
     end
   end
 
-  post '/register' do
+  # post '/register' do
+  #   user = User.new(params)
+  #   if user.save
+  #       session[:user_id] = @user.id
+  #       redirect to "/users/#{current_user.id}"
+  #   else
+  #       @error = user.errors.full_messages.join(", ")
+  #   end
+  # end
+
+  post "/register" do
     user = User.new(params)
-    if user.save
-        session[:user_id] = @user.id
-        redirect to "/users/#{current_user.id}"
+    if User.find_by(email: params[:email])
+      @error = "Email already taken. Please login or use another email address."
+      # redirect back
+    # elsif params[:password] != params[:confirm_password]
+    #   @error = "Passwords do not match. Please re-enter passwords."
+      # redirect back
     else
-        @error = user.errors.full_messages.join(", ")
+      User.create(params)
+      session[:user_id] = user.id
+      redirect "/users/#{user.id}"
     end
   end
 
-    get '/logout' do
+  get '/logout' do
         session.clear
-        redirect to '/home'
+        redirect to '/'
     end
 
     get '/users' do
@@ -45,15 +60,15 @@ class UserController < App
     end
     @users = User.all
     erb :"users/index"
-end
+  end
 
 
-get '/users/:id' do
+  get '/users/:id' do
     if !logged_in?
         redirect to '/login'
     end
     @user = User.find_by_id(params[:id])
     erb :"users/show"
-end
+  end
 
 end

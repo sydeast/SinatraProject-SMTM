@@ -10,9 +10,8 @@ gem 'rake'
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
-gem 'corneal'
 gem 'bcrypt'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.6.0'
 
 
 group :test do
