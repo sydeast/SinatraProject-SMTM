@@ -7,8 +7,8 @@ class CreateArtists < ActiveRecord::Migration[4.2]
             t.string :photo_url
             t.string :profile_url
             t.boolean :read_only
-            t.integer :user_id
-            t.references :rapper, :polymorphic => true
+            t.integer :creator_id
+
         end
     end
 end

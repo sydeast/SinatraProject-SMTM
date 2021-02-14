@@ -8,5 +8,6 @@ require './config/environment'
 
 
 use UserController
+use LineupController
 use Rack::MethodOverride
 run App

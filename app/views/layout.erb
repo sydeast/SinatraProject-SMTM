@@ -9,9 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--Styles-->
         <link rel="stylesheet" href="/css/bootstrap.css" />
-        <link rel="stylesheet" href="/css/bootstrap-responsive.css" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
         <style>
             body {
                 padding-top: 60px;
@@ -46,13 +44,10 @@
                     <a class="brand" href="/home">Show Me The Money</a>
                     <div class="nav-item">
                         <ul class="nav">
-                            <% if !logged_in? %>
                                 <a href="/login">Login</a>
-                            <% else %>
                             <a href="/logout">Logout</a>
-                            <a href="/lineup">Lineups</a>
+                            <a href="/lineups">Lineups</a>
                             <a href="/artists">Artists</a>
-                            <% end %>
                         </ul>
                     </div><!-- /.nav-collapse -->
                 </div><!-- /.container -->

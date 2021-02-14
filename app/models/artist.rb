@@ -1,4 +1,5 @@
 class Artist < ActiveRecord::Base
-    belongs_to :rapper, :polymorphic => true
+    belongs_to :creator, class_name: "User"
+    belongs_to :lineups
 
 end
