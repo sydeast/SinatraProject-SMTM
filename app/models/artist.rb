@@ -1,5 +1,6 @@
 class Artist < ActiveRecord::Base
-    belongs_to :creator, class_name: "User"
-    belongs_to :lineups
+    belongs_to :users
+    belongs_to :attachable, polymorphic: true
+
 
 end

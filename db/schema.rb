@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "photo_url"
     t.string "profile_url"
     t.boolean "read_only"
-    t.integer "user_id"
-    t.string "rapper_type"
-    t.integer "rapper_id"
+    t.integer "creator_id"
+    t.string "attachable_type"
+    t.integer "attachable_id"
   end
 
   create_table "lineups", force: :cascade do |t|

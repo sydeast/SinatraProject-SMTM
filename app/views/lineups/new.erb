@@ -3,53 +3,48 @@
 
 
 <label for="lineup_name">All Star Lineup Name:</label>
-<input type="text" name="lineup[name]" required>
-    <div class="artist_selection">
+<input type="name" name="name" id="name" required>
+<div class="description">
+    <p>
+        To add artists who haven't appeared on the show, please go <a href="/artists/new">here</a> first! Create your artists there and then come back to select them in the drop downs below. Want to know more about the artists in the list? Click Artists in the navigation.
+    </p>
+</div>
+
+<div class="artist_selection" required>
 
     <li><label for="artist_pick1">First Selection:</label>
-        <select id="artist_box" name="artist_id">
+        <select id="artist_box" name="pick1_id">
             <% @artists.each do |artist| %>
                 <option value="<%=artist.id%>">
-                    <%= artist.name %>
+                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
                 </option>
                 <% end %>
         </select>
-        <button onclick="removeOption(); ">
-            Add artist
-        </button>
     <li><label for="artist_pick2">Second Selection:</label>
-        <select id="artist_box" name="artist_id">
+        <select id="artist_box" name="pick2_id">
             <% @artists.each do |artist| %>
                 <option value="<%=artist.id%>">
-                    <%= artist.name %>
+                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
                 </option>
                 <% end %>
         </select>
-        <button onclick="removeOption(); ">
-            Add artist
-        </button>
     <li><label for="artist_pick3">Third Selection:</label>
-        <select id="artist_box" name="artist_id">
+        <select id="artist_box" name="pick3_id">
             <% @artists.each do |artist| %>
                 <option value="<%=artist.id%>">
-                    <%= artist.name %>
+                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
                 </option>
                 <% end %>
         </select>
-        <button onclick="removeOption(); ">
-            Add artist
-        </button>
     <li><label for="artist_pick4">Last Selection:</label>
-        <select id="artist_box" name="artist_id">
+        <select id="artist_box" name="pick4_id">
             <% @artists.each do |artist| %>
                 <option value="<%=artist.id%>">
-                    <%= artist.name %>
+                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
                 </option>
                 <% end %>
         </select>
-        <button type="reload" onclick="removeOption()">
-            Add artist
-        </button>
+
     </div>
 
         <button type="submit" value="Submit">Save Lineup</button>

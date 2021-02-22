@@ -2,9 +2,9 @@
 <h3>Your All Star Cast</h3>
 <a href="/lineups/new">Create New Lineup</a>
 <ol>
-<%@lineups.each.with_index(1) do |lineup, i|%>
+<%@lineups.each.with_index(1) do |lineup|%>
         <li>
-            <%=i%>. <a href="/lineups/<%=lineup.id%>">
+            <a href="/lineups/<%=lineup.id%>">
                     <%=lineup.name.capitalize%>
                 </a>
         </li>

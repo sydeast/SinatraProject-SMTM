@@ -8,7 +8,7 @@ class CreateArtists < ActiveRecord::Migration[4.2]
             t.string :profile_url
             t.boolean :read_only
             t.integer :creator_id
-
+            t.references :attachable, polymorphic: true
         end
     end
 end
