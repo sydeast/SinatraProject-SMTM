@@ -10,29 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_185340) do
+ActiveRecord::Schema.define(version: 3) do
 
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-    t.string "season"
-    t.string "placed"
-    t.string "photo_url"
-    t.string "profile_url"
-    t.boolean "read_only"
-    t.integer "creator_id"
-    t.string "attachable_type"
-    t.integer "attachable_id"
-  end
-
-  create_table "lineup_artists", force: :cascade do |t|
-    t.integer "artist_id"
-    t.integer "lineup_id"
-  end
-
-  create_table "lineups", force: :cascade do |t|
+  create_table "pets", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
-    t.integer "artist_id"
+    t.integer "age"
+    t.string "type"
+    t.string "breed"
+    t.string "gender"
+    t.boolean "neutered_spayed"
+    t.string "medical_conditions"
+    t.integer "weight"
   end
 
   create_table "users", force: :cascade do |t|

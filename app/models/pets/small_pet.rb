@@ -1,0 +1,3 @@
+class SmallPet < Pet
+
+end

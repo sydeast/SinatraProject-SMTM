@@ -1,0 +1,36 @@
+<h1>Your All Star Pet</h1>
+
+<h2><%=@pet.name.capitalize%></h2>
+
+<p>
+    Age: <%=@pet.age%><br>
+    Weight: <%=@pet.weight%><br>
+    Breed: <%=@pet.breed%><br>
+    Gender: <%=@pet.gender%><br>
+    Spayed/Neutered?:
+    <% if @pet.neutered_spayed %>
+        <%= "Yes" %>
+    <% else %>
+    <%= "No" %>
+    <% end %><br>
+    Medical Conditions: <%=@pet.medical_conditions%>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/pets/<%#{@pet.id}%>/edit" class="btn btn-primary">Edit pet</a>

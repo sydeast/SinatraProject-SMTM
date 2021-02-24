@@ -1,0 +1,3 @@
+class Bird < Pet
+    
+end

@@ -1,0 +1,44 @@
+<h2>Add New Pet</h2>
+<form action="/pets" method="POST">
+
+
+<label for="pet_name">Hello, I am your pet! My name is:</label>
+<input type="name" name="name" id="name" required>
+
+<div class="pet_information">
+    <div>
+        <label for="age">Age: </label>
+        <input type="text" name="age" id="age">
+    </div>
+    <div>
+        <label for="type">Type: </label>
+        <input type="text" name="type" id="type">
+    </div>
+    <div>
+        <label for="breed">Breed: </label>
+        <input type="text" name="breed" id="breed">
+    </div>
+    <div>
+        <label for="gender">Gender: </label>
+        <input type="text" name="gender" id="gender">
+    </div>
+    <div>
+        <label for="neutered_spayed">Spayed/Neutered?: </label>
+        <input type="radio" name="neutered_spayed" id="neutered_spayed">
+    </div>
+    <div>
+        <label for="weight">Weight: </label>
+        <input type="text" name="weight" id="weight" required>
+    </div>
+    <div>
+        <label for="medical_conditions">Medical Conditions: </label>
+        <textarea name="medical_conditions" id="medical_conditions" rows="-5" cols="20">
+        </textarea>
+    </div>
+
+
+</div>
+
+        <button type="submit" value="Submit">Save Pet</button>
+        <button type="reset" value="Reset">Reset</button>
+</form>

@@ -8,6 +8,6 @@ require './config/environment'
 
 
 use UserController
-use LineupController
+use PetController
 use Rack::MethodOverride
 run App

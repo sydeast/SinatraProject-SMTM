@@ -1,0 +1,12 @@
+
+<h3>Your All Star Pets</h3>
+<a href="/pets/new">Create New pet</a>
+<ol>
+<%@pets.each.with_index(1) do |pet|%>
+        <li>
+            <a href="/pets/<%=pet.id%>">
+                    <%=pet.name.capitalize%>
+                </a>
+        </li>
+        <%end%>
+</ol>
