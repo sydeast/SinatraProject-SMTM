@@ -5,5 +5,6 @@ class CreateLineups < ActiveRecord::Migration[4.2]
             t.string :name
             t.integer :artist_id
         end
+
     end
 end

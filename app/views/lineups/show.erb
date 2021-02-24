@@ -1,13 +1,8 @@
 <h2>Tonight on Show Me The Money - All Star!</h2>
 
 <h3>First Artist</h3>
-<% @lineup.artists.each do |artist| %>
-    <%=artist.profile_url %>
-        <%=artist.name %>
-            <%=artist.season%>
-                <%=artist.placed%>
-                    <br>
-                    <br>
-                    <% end %>
+<%=@lineup.artists.name%>
+
+
 
 <a href="/lineups/<%#{@lineup.id}%>/edit" class="btn btn-primary">Edit Lineup</a>

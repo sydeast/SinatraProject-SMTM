@@ -13,37 +13,14 @@
 <div class="artist_selection" required>
 
     <li><label for="artist_pick1">First Selection:</label>
-        <select id="artist_box" name="pick1_id">
-            <% @artists.each do |artist| %>
+        <select id="selections" name="lineup" multiple=> true>
+            <% @artists.all.collect do |artist| %>
                 <option value="<%=artist.id%>">
                     <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
                 </option>
                 <% end %>
         </select>
-    <li><label for="artist_pick2">Second Selection:</label>
-        <select id="artist_box" name="pick2_id">
-            <% @artists.each do |artist| %>
-                <option value="<%=artist.id%>">
-                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
-                </option>
-                <% end %>
-        </select>
-    <li><label for="artist_pick3">Third Selection:</label>
-        <select id="artist_box" name="pick3_id">
-            <% @artists.each do |artist| %>
-                <option value="<%=artist.id%>">
-                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
-                </option>
-                <% end %>
-        </select>
-    <li><label for="artist_pick4">Last Selection:</label>
-        <select id="artist_box" name="pick4_id">
-            <% @artists.each do |artist| %>
-                <option value="<%=artist.id%>">
-                    <%= artist.name %>- <%= artist.season %> - <%=artist.placed %>
-                </option>
-                <% end %>
-        </select>
+
 
     </div>
 

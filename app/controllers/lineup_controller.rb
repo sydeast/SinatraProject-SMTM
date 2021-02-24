@@ -21,7 +21,11 @@ class LineupController < App
     post '/lineups' do
         @lineup = Lineup.new(params)
         @lineup.user_id = current_user.id
-        @lineup.save
+        if @lineup.save
+            params[:selections].each do |artists|
+                artists = LineupArtists.new(:artist.id => artists, :lineup_id => @lineup_id)
+            end
+        end
         redirect "/lineups/#{@lineup.id}"
     end
 
@@ -30,7 +34,7 @@ class LineupController < App
         erb :'/lineups/show'
     end
 
-
+  helpers do
     #Create new lineup
     def new_lineup
         @user_options = Artist.all.where(read_only: "t")
@@ -38,7 +42,7 @@ class LineupController < App
     end
 
     def get_lineup
-        @lineup = Lineup.find(params["id"])
+        @lineup = Lineup.find(params[:id])
     end
-
+  end
 end
