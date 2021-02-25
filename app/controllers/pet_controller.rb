@@ -38,15 +38,16 @@ class PetController < App
     end
 
     patch '/pets/:id' do
+
         get_pet
-        @pet.update(params["age", "weight", "breed", "gender", "neutered_spayed", "medical_conditions"])
+        @pet.update(params["pet"])
         redirect "/pets/#{@pet.id}"
     end
 
     delete '/pets/:id' do
         get_pet
         @pet.destroy
-        redirect to 'pets/index'
+        redirect 'pets/index'
     end
 
 

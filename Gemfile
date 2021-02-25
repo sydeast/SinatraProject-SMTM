@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem "activerecord", '6.1.0', :require => 'active_record'
+gem "activerecord", ~>5.2', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
-gem 'sqlite3', '> 1.4'
+gem 'sqlite3',
 gem 'sinatra'
 gem 'tux'
 gem 'require_all'
@@ -15,7 +15,7 @@ gem 'bootstrap', '~> 4.6.0'
 gem 'rack-flash3'
 
 
-group :test do
-  gem 'rspec'
-  gem 'rack-test'
-end
+# group :test do
+#   gem 'rspec'
+#   gem 'rack-test'
+# end

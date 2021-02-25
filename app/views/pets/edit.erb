@@ -5,31 +5,31 @@
   <div class="pet_information">
     <div>
         <label for="age">Age: </label>
-        <input type="text" name="age" id="age" value= "<%=@pet.age%>">
+        <input type="text" name="pet[age]" id="age" value= "<%=@pet.age%>">
     </div>
     <div>
         <label for="type">Type: </label>
-        <input type="text" name="type" id="type" value= "<%=@pet.type%>">
+        <input type="text" name="pet[type]" id="type" value= "<%=@pet.type%>">
     </div>
     <div>
         <label for="breed">Breed: </label>
-        <input type="text" name="breed" id="breed"  value= "<%=@pet.breed%>">
+        <input type="text" name="pet[breed]" id="breed"  value= "<%=@pet.breed%>">
     </div>
     <div>
         <label for="gender">Gender: </label>
-        <input type="text" name="gender" id="gender" value= "<%=@pet.breed%>">
+        <input type="text" name="pet[gender]" id="gender" value= "<%=@pet.breed%>">
     </div>
     <div>
         <label for="neutered_spayed">Spayed/Neutered?: </label>
-        <input type="checkbox" name="neutered_spayed" id="neutered_spayed" value= "<%=@pet.neutered_spayed%>">
+        <input type="checkbox" name="pet[neutered_spayed]" id="neutered_spayed" value= "<%=@pet.neutered_spayed%>">
     </div>
     <div>
         <label for="weight">Weight: </label>
-        <input type="text" name="weight" id="weight" value= "<%=@pet.weight%>" required>
+        <input type="text" name="pet[weight]" id="weight" value= "<%=@pet.weight%>" required>
     </div>
     <div>
         <label for="medical_conditions">Medical Conditions: </label>
-        <textarea name="medical_conditions" id="medical_conditions" value= "<%=@pet.medical_conditions%>">
+        <textarea name="pet[medical_conditions]" id="medical_conditions" value= "<%=@pet.medical_conditions%>">
         </textarea>
     </div>
 
