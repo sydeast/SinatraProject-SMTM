@@ -1,6 +1,6 @@
 <h2>Editing <%=@pet.name%></h2>
-<form action="/pets/<%=@pet.id%>" method="POST">
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
+<form action="/pets/<%=@pet.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
 
   <div class="pet_information">
     <div>
@@ -29,7 +29,7 @@
     </div>
     <div>
         <label for="medical_conditions">Medical Conditions: </label>
-        <textarea name="medical_conditions" id="medical_conditions" rows="-5" cols="20", value= "<%=@pet.medical_conditions%>">
+        <textarea name="medical_conditions" id="medical_conditions" value= "<%=@pet.medical_conditions%>">
         </textarea>
     </div>
 
@@ -40,7 +40,7 @@
 
   </form>
 <br>
-<form action="/pets/<%=@pet.id%>" method="POST">
+<form action="/pets/<%=@pet.id%>" method="post">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Remove Pet">
 </form>

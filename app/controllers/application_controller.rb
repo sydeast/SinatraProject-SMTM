@@ -1,6 +1,3 @@
-require 'sinatra/base'
-require 'rack-flash'
-
 class App < Sinatra::Base
 
   configure do
@@ -8,7 +5,7 @@ class App < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "password_security"
-    register Sinatra::Flash
+  
   end
 
   get '/' do

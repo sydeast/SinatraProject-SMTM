@@ -22,6 +22,7 @@ class PetController < App
     post '/pets' do
         new_pet
         @pet.user_id = current_user.id
+        @pet.neutered_spayed ||= false
         @pet.save
         redirect "/pets/#{@pet.id}"
     end
@@ -38,15 +39,8 @@ class PetController < App
 
     patch '/pets/:id' do
         get_pet
-        @pet.update!(
-            :age => params[:age],
-            :weight => params[:weight],
-            :breed => params[:breed],
-            :gender => params[:gender],
-            :neutered_spayed => params[:neutered_spayed],
-            :medical_conditions => params[:medical_conditions])
-        @pet.save
-        redirect to "/pets/#{@pet.id}"
+        @pet.update(params["age", "weight", "breed", "gender", "neutered_spayed", "medical_conditions"])
+        redirect "/pets/#{@pet.id}"
     end
 
     delete '/pets/:id' do
@@ -64,7 +58,7 @@ class PetController < App
     end
 
     def get_pet
-        @pet = Pet.find_by(id: params[:id])
+        @pet = Pet.find(params[:id])
     end
   end
 end
