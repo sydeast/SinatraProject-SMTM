@@ -11,7 +11,7 @@ class PetController < App
 
     get '/pets/new' do
         if !logged_in?
-            redirect "/login"
+            redirect to "/login"
         else
         erb :'pets/new'
         end
@@ -24,12 +24,6 @@ class PetController < App
         redirect "/pets/#{@pet.id}"
     end
 
-    patch '/pets/:id' do
-        get_pet
-        @pet.save(params)
-        redirect "/pets/#{@pet.id}"
-    end
-
     get '/pets/:id' do
         get_pet
         erb :'/pets/show'
@@ -38,6 +32,24 @@ class PetController < App
     get '/pets/:id/edit' do
         get_pet
         erb :'/pets/edit'
+    end
+
+    patch '/pets/:id' do
+        get_pet
+        @pet.update(
+            :age => params[:age],
+            :weight => params[:weight],
+            :breed => params[:breed],
+            :gender => params[:gender],
+            :neutered_spayed => params[:neutered_spayed],
+            :medical_conditions => params[:medical_conditions])
+        redirect "/pets/#{@pet.id}"
+    end
+
+    delete '/pets/:id' do
+        get_pet
+        @pet.detroy
+        redirect "/users/#{user.id}"
     end
 
 
