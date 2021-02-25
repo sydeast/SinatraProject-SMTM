@@ -1,4 +1,6 @@
 class PetController < App
+
+
     get '/pets' do
         if logged_in?
             @pets = current_user.pets
@@ -36,13 +38,14 @@ class PetController < App
 
     patch '/pets/:id' do
         get_pet
-        @pet.save(
+        @pet.update!(
             :age => params[:age],
             :weight => params[:weight],
             :breed => params[:breed],
             :gender => params[:gender],
             :neutered_spayed => params[:neutered_spayed],
             :medical_conditions => params[:medical_conditions])
+        @pet.save
         redirect to "/pets/#{@pet.id}"
     end
 

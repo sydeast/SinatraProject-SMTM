@@ -12,6 +12,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'bootstrap', '~> 4.6.0'
+gem 'rack-flash3'
 
 
 group :test do
