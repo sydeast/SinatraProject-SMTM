@@ -36,20 +36,20 @@ class PetController < App
 
     patch '/pets/:id' do
         get_pet
-        @pet.update(
+        @pet.save(
             :age => params[:age],
             :weight => params[:weight],
             :breed => params[:breed],
             :gender => params[:gender],
             :neutered_spayed => params[:neutered_spayed],
             :medical_conditions => params[:medical_conditions])
-        redirect "/pets/#{@pet.id}"
+        redirect to "/pets/#{@pet.id}"
     end
 
     delete '/pets/:id' do
         get_pet
-        @pet.detroy
-        redirect "/users/#{user.id}"
+        @pet.destroy
+        redirect to 'pets/index'
     end
 
 
