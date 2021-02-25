@@ -18,9 +18,15 @@ class PetController < App
     end
 
     post '/pets' do
-        @pet = Pet.new(params)
+        new_pet
         @pet.user_id = current_user.id
         @pet.save
+        redirect "/pets/#{@pet.id}"
+    end
+
+    patch '/pets/:id' do
+        get_pet
+        @pet.save(params)
         redirect "/pets/#{@pet.id}"
     end
 
@@ -29,14 +35,21 @@ class PetController < App
         erb :'/pets/show'
     end
 
+    get '/pets/:id/edit' do
+        get_pet
+        erb :'/pets/edit'
+    end
+
+
+
   helpers do
     #Create new pet
     def new_pet
-        @pet = Pet.new
+        @pet = Pet.new(params)
     end
 
     def get_pet
-        @pet = Pet.find(params[:id])
+        @pet = Pet.find_by(id: params[:id])
     end
   end
 end

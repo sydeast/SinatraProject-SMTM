@@ -1,0 +1,41 @@
+<h2>Editing <%=@pet.name%></h2>
+<form action="/pets/<%=@pet.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+
+  <div class="pet_information">
+    <div>
+        <label for="age">Age: </label>
+        <input type="text" name="age" value= "<%=@pet.age%>">
+    </div>
+    <div>
+        <label for="type">Type: </label>
+        <input type="text" name="type" value= "<%=@pet.type%>">
+    </div>
+    <div>
+        <label for="breed">Breed: </label>
+        <input type="text" name="breed" value= "<%=@pet.breed%>">
+    </div>
+    <div>
+        <label for="gender">Gender: </label>
+        <input type="text" name="gender" value= "<%=@pet.breed%>">
+    </div>
+    <div>
+        <label for="neutered_spayed">Spayed/Neutered?: </label>
+        <input type="checkbox" name="neutered_spayed" value= "<%=@pet.neutered_spayed%>">
+    </div>
+    <div>
+        <label for="weight">Weight: </label>
+        <input type="text" name="weight" value= "<%=@pet.weight%>" required>
+    </div>
+    <div>
+        <label for="medical_conditions">Medical Conditions: </label>
+        <textarea name="medical_conditions" rows="-5" cols="20", value= "<%=@pet.medical_conditions%>">
+        </textarea>
+    </div>
+
+
+</div>
+
+        <button type="submit" value="Submit">Save Pet</button>
+
+  </form>
