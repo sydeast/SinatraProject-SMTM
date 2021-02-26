@@ -6,9 +6,9 @@
     </head>
 
     <div class="text-center">
-        <form action="/register" method="POST"></form>
+        <form action="/register" method="POST" class="form-signin">
             <h3>Register your account today!</h3>
-            <p>Create an account to start tracking your pets' development alongside this app's development. Let's grow together!</p>
+            <p>Create an account to start tracking your pets' development alongside this app's development. Let's grow together</p>
         <div>
             <label for="name" class="sr-only">Name</label>
             <input id="name" type="text" name="name" placeholder="Preferred Name" required autofocus/>
@@ -22,11 +22,11 @@
             <input id="password" type="password" name="password" placeholder="Password" required/>
         </div>
         <div>
-            <label for="password" class="sr-only">Retype Password</label>
-            <input id="confirm_password" type="password" placeholder="Retype Password" name="password" required/>
+            <label for="password" class="sr-only">Re-enter Password</label>
+            <input id="confirm_password" type="password" placeholder="Retype Password" name="confirm_password" required/>
         </div>
         <br>
-        <button type="submit" value="submit">Register</button>
+        <button type="submit" value="submit">Sign Up</button>
         <button type="reset" value="Reset">Reset</button>
         </form>
     </div>

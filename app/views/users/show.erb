@@ -33,7 +33,7 @@
         </div>
         <div class="reptiles_list">
             <% if current_user.pets.includes(:type).where(type: "Reptile" )%>
-                <h4>Your Reptles</h4>
+                <h4>Your Reptiles</h4>
                 <%reptiles=current_user.pets.where(type: "Reptile" )%>
                     <%reptiles.each do |reptile|%>
                         <%=reptile.name%><br>

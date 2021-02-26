@@ -24,18 +24,9 @@ class UserController < App
     end
   end
 
-  # post '/register' do
-  #   user = User.new(params)
-  #   if user.save
-  #       session[:user_id] = @user.id
-  #       redirect to "/users/#{current_user.id}"
-  #   else
-  #       @error = user.errors.full_messages.join(", ")
-  #   end
-  # end
 
-  post "/register" do
-    user = User.new(params)
+  post '/register' do
+    user = User.new(name: params[:name], email: params[:email], password: params[:password])
     if User.find_by(email: params[:email])
       @error = "Email already taken. Please login or use another email address."
       # redirect back
@@ -43,9 +34,9 @@ class UserController < App
     #   @error = "Passwords do not match. Please re-enter passwords."
       # redirect back
     else
-      User.create(params)
+      user.save
       session[:user_id] = user.id
-      redirect "/users/#{user.id}"
+      redirect 'users/show'
     end
   end
 
