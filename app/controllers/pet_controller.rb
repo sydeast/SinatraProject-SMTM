@@ -2,24 +2,19 @@ class PetController < App
 
 
     get '/pets' do
-        if logged_in?
-            @pets = current_user.pets
-            erb :'pets/index'
-        # else
-        #     @error: "Please login to continue."
-        end
+        if_not_logged_in
+        @pets = current_user.pets
+        erb :'pets/index'
     end
 
 
     get '/pets/new' do
-        if !logged_in?
-            redirect to "/login"
-        else
+        if_not_logged_in
         erb :'pets/new'
-        end
     end
 
     post '/pets' do
+        if_not_logged_in
         new_pet
         @pet.user_id = current_user.id
         @pet.neutered_spayed ||= false
@@ -28,11 +23,13 @@ class PetController < App
     end
 
     get '/pets/:id' do
+        if_not_logged_in
         get_pet
         erb :'/pets/show'
     end
 
     get '/pets/:id/edit' do
+        if_not_logged_in
         get_pet
         erb :'/pets/edit'
     end
@@ -42,12 +39,14 @@ class PetController < App
     # end
 
     patch '/pets/:id' do
+        if_not_logged_in
         get_pet
         @pet.update(params["pet"])
         redirect "/pets/#{@pet.id}"
     end
 
     delete '/pets/:id' do
+        if_not_logged_in
         get_pet
         @pet.destroy
         redirect 'pets/index'
