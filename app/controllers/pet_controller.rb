@@ -37,8 +37,11 @@ class PetController < App
         erb :'/pets/edit'
     end
 
-    patch '/pets/:id' do
+    # post '/pets/:id' do
+    #     binding.pry
+    # end
 
+    patch '/pets/:id' do
         get_pet
         @pet.update(params["pet"])
         redirect "/pets/#{@pet.id}"
@@ -61,5 +64,6 @@ class PetController < App
     def get_pet
         @pet = Pet.find(params[:id])
     end
+
   end
 end

@@ -9,7 +9,14 @@
     </div>
     <div>
         <label for="type">Type: </label>
-        <input type="text" name="pet[type]" id="type" value= "<%=@pet.type%>">
+        <select id="type" name="pet[type]" required value= "<%=@pet.type%>">
+            <option value="Bird">Bird</option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Other">Other</option>
+            <option value="Reptile">Reptile</option>
+            <option value="SmallPet">Small Pet</option>
+        </select>
     </div>
     <div>
         <label for="breed">Breed: </label>
