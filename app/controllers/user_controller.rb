@@ -18,6 +18,7 @@ class UserController < App
     user = User.find_by(:email => params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+
       redirect 'users/show'
     else
         erb :error
