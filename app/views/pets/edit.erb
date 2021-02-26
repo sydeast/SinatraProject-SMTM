@@ -1,8 +1,12 @@
-<h2>Editing <%=@pet.name%></h2>
+<h2>Editing <%=@pet.name.capitalize%></h2>
 <form action="/pets/<%=@pet.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
 
   <div class="pet_information">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="pet[name]" id="name" value="<%=@pet.name%>">
+    </div>
     <div>
         <label for="age">Age: </label>
         <input type="text" name="pet[age]" id="age" value= "<%=@pet.age%>">
@@ -24,7 +28,12 @@
     </div>
     <div>
         <label for="gender">Gender: </label>
-        <input type="text" name="pet[gender]" id="gender" value= "<%=@pet.breed%>">
+        <select id="type" name="pet[gender]" id="gender" value= "<%=@pet.gender%>">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+            <option value="unknown">Unknown</option>
+        </select>
     </div>
     <div>
         <label for="neutered_spayed">Spayed/Neutered?: </label>
@@ -33,6 +42,11 @@
     <div>
         <label for="weight">Weight: </label>
         <input type="text" name="pet[weight]" id="weight" value= "<%=@pet.weight%>" required>
+        <select id="wunits" name="pet[wunits]" id="wunits" required value="<%=@pet.wunits%>">
+            <option value="">--</option>
+            <option value="lbs">lbs</option>
+            <option value="kg">kg</option>
+        </select>
     </div>
     <div>
         <label for="medical_conditions">Medical Conditions: </label>

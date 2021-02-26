@@ -2,7 +2,7 @@
 <form action="/pets" method="POST">
 
 
-<label for="pet_name">Hello, I am your pet! My name is:</label>
+<label for="pet_name">Hi, my name is:</label>
 <input type="name" name="name" id="name" required>
 
 <div class="pet_information">
@@ -28,7 +28,13 @@
     </div>
     <div>
         <label for="gender">Gender: </label>
-        <input type="text" name="gender" id="gender">
+        <select id="type" name="gender" id="gender">
+            <option value="">--Please choose an option--</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+            <option value="unknown">Unknown</option>
+        </select>
     </div>
     <div>
         <label for="neutered_spayed">Spayed/Neutered?: </label>
@@ -37,6 +43,11 @@
     <div>
         <label for="weight">Weight: </label>
         <input type="text" name="weight" id="weight" required>
+        <select id="wunits" name="wunits" id="wunits" required>
+            <option value="">--</option>
+            <option value="lbs">lbs</option>
+            <option value="kg">kg</option>
+        </select>
     </div>
     <div>
         <label for="medical_conditions">Medical Conditions: </label>
