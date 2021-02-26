@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<link href="../../../public/css/signin.css" rel="stylesheet">
+</head>
 
-<body>
-    <h3>Welcome to Show Me The Money All Star Generator</h3>
-    <p>Who is in your All Star lineup? Login or Register to continue!</p>
-    <form action="/login" method="POST">
-        <li>
-            <label for="email">Email</label>
-            <input type="text" name="email" />
-        </li>
+<body class="text-center">
+    <form action="/login" method="POST" class="form-signin">
+        <h3>Hello! Welcome to the Somi Pet Manager.</h3>
+        <p>Please Login or Register to continue!</p>
+        <div>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" placeholder="Email address" required autofocus/>
+        </div>
+        <div>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" placeholder="Password" required/>
         <br>
-        <li>
-            <label for="password">Password</label>
-            <input type="password" name="password" />
-        </li>
+        </div>
         <br>
         <button type="submit" value="Submit">Log In</button>
         <button type="reset" value="Reset">Reset</button>
