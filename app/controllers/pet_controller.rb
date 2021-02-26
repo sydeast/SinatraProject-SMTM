@@ -61,7 +61,7 @@ class PetController < App
     end
 
     def get_pet
-        @pet = Pet.find(params[:id])
+        @pet = Pet.find_by(params[:id])
     end
 
     def if_not_allowed

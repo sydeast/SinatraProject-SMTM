@@ -6,8 +6,8 @@ class App < Sinatra::Base
     enable :sessions
     set :session_secret, "password_security"
 
-
   end
+
 
   get '/' do
       erb :home
@@ -33,6 +33,7 @@ class App < Sinatra::Base
         redirect to "/login"
       end
     end
+
 
   end
 end
