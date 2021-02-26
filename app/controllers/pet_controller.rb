@@ -24,8 +24,10 @@ class PetController < App
 
     get '/pets/:id' do
         if_not_logged_in
+        if_not_allowed
         get_pet
         erb :'/pets/show'
+
     end
 
     get '/pets/:id/edit' do
@@ -34,12 +36,9 @@ class PetController < App
         erb :'/pets/edit'
     end
 
-    # post '/pets/:id' do
-    #     binding.pry
-    # end
-
     patch '/pets/:id' do
         if_not_logged_in
+        if_not_allowed
         get_pet
         @pet.update(params["pet"])
         redirect "/pets/#{@pet.id}"
@@ -47,6 +46,7 @@ class PetController < App
 
     delete '/pets/:id' do
         if_not_logged_in
+        if_not_allowed
         get_pet
         @pet.destroy
         redirect 'pets/index'
@@ -62,6 +62,13 @@ class PetController < App
 
     def get_pet
         @pet = Pet.find(params[:id])
+    end
+
+    def if_not_allowed
+        get_pet
+        if @pet.user_id != current_user.id
+            redirect '/error'
+        end
     end
 
   end
