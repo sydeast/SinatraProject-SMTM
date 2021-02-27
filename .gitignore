@@ -1,0 +1,1 @@
+db/migrate/20210222002211_create_lineups_artists_join_table.rb

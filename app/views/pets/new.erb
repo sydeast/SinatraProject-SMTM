@@ -1,0 +1,65 @@
+<div class="text-center">
+    <title>Adding New Pet</title>
+</div>
+<form action="/pets" method="POST">
+
+
+<label for="pet_name">Hi, my name is:</label>
+<input type="name" name="name" id="name" required>
+
+<div class="pet_information">
+    <div>
+        <label for="age">Age: </label>
+        <input type="text" name="age" id="age">
+    </div>
+    <div>
+        <label for="type">Type: </label>
+        <select id="type" name="type" required>
+            <option value="">--Please choose an Pet Type--</option>
+            <option value="Bird">Bird</option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Other">Other</option>
+            <option value="Reptile">Reptile</option>
+            <option value="SmallPet">Small Pet</option>
+        </select>
+    </div>
+    <div>
+        <label for="breed">Breed: </label>
+        <input type="text" name="breed" id="breed">
+    </div>
+    <div>
+        <label for="gender">Gender: </label>
+        <select id="type" name="gender" id="gender">
+            <option value="">--Please choose an option--</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+            <option value="unknown">Unknown</option>
+        </select>
+    </div>
+    <div>
+        <label for="neutered_spayed">Spayed/Neutered?: </label>
+        <input type="checkbox" name="neutered_spayed" id="neutered_spayed">
+    </div>
+    <div>
+        <label for="weight">Weight: </label>
+        <input type="text" name="weight" id="weight" required>
+        <select id="wunits" name="wunits" id="wunits" required>
+            <option value="">--</option>
+            <option value="lbs">lbs</option>
+            <option value="kg">kg</option>
+        </select>
+    </div>
+    <div>
+        <label for="medical_conditions">Medical Conditions: </label>
+        <textarea name="medical_conditions" id="medical_conditions">
+        </textarea>
+    </div>
+
+
+</div>
+
+        <button class="btn btn-success" type="submit" value="Submit">Save Pet</button>
+        <button class="btn btn-link" type="reset" value="Reset">Reset</button>
+</form>

@@ -6,8 +6,7 @@ require './config/environment'
 #   raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
 # end
 
-
-use UserController
-use LineupController
 use Rack::MethodOverride
+use UserController
+use PetController
 run App

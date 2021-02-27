@@ -1,20 +1,33 @@
-<h1>Create a new account here</h1>
-<form action="/register" method="POST">
-<li>
-    <label for="name">Name</label>
-    <input id="name" type="text" name="name" />
-</li>
-<li>
-    <label for="email">Email</label>
-    <input id="email" type="email" name="email" />
-</li>
-<li>
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" />
-</li>
-<li>
-    <label for="password">Re-enter Password</label>
-    <input id="confirm_password" type="password" name="password" />
-</li>
-<input type="submit" value="Sign Up" />
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="../../../public/css/signin.css" rel="stylesheet">
+    </head>
+
+    <div class="text-center">
+        <form action="/register" method="POST" class="form-signin">
+            <h3>Register your account today!</h3>
+            <p>Create an account to start tracking your pets' development alongside this app's development. Let's grow together</p>
+        <div>
+            <label for="name" class="sr-only">Name</label>
+            <input id="name" type="text" name="name" placeholder="Preferred Name" required autofocus/>
+        </div>
+        <div>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" type="email" name="email" placeholder="Email Address" required/>
+        </div>
+        <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" type="password" name="password" placeholder="Password" required/>
+        </div>
+        <div>
+            <label for="password" class="sr-only">Re-enter Password</label>
+            <input id="confirm_password" type="password" placeholder="Retype Password" name="confirm_password" required/>
+        </div>
+        <br>
+        <button type="submit" value="submit">Sign Up</button>
+        <button type="reset" value="Reset">Reset</button>
+        </form>
+    </div>
+</html>

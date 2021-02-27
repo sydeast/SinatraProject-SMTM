@@ -1,68 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-100">
     <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
-        <title>Show Me The Money - All Stars</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--Styles-->
-        <link rel="stylesheet" href="/css/bootstrap.css" />
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="../../public/css/bootstrap.min.css" rel="stylesheet">
         <style>
-            body {
-                padding-top: 60px;
-                /* When using the navbar-top-fixed */
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
             }
 
-            .center {
-                float: none;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .centercontents {
-                text-align: center !important;
-            }
-
-            .alignrightcontents {
-                text-align: right !important;
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
             }
         </style>
+
+
+        <link href="../../public/css/sticky-footer-navbar.css" rel="stylesheet">
     </head>
-    <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="/home">Show Me The Money</a>
-                    <div class="nav-item">
-                        <ul class="nav">
-                                <a href="/login">Login</a>
-                            <a href="/logout">Logout</a>
-                            <a href="/lineups">Lineups</a>
-                            <a href="/artists">Artists</a>
-                        </ul>
-                    </div><!-- /.nav-collapse -->
-                </div><!-- /.container -->
-            </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-    </nav>
 
-        <%= yield %>
+    <body class="d-flex flex-column h-100">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+                    <a class="navbar-brand" href="/home">Home</a>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav mr-auto">
+                                <% if logged_in?%>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/show">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pets">Edit Pets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pets/new">New Pet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                                <% else %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register">Register</a>
+                                </li>
+                                <% end %>
+                            </ul>
+                        </div>
+                        <div>
+                            <% if logged_in?%>
+                            <p>Hi, <a href="/users/account"><%=current_user.name.capitalize%></a></p>
+                            <% else %>
+                            <p>Hi! Join us today!</p>
+                            <% end %>
+                        </div>
+             </nav>
+        </header>
 
-    <!-- Bootstrap jQuery Plugins-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <main role="main" class="flex-shrink-0">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <%= yield %>
+            </div>
+        </main>
+     <!-- Bootstrap jQuery Plugins-->
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../public/js/vendor/jquery.slim.min.js"><\/script>')</script>
+        <script src="../../public/js/bootstrap.bundle.min.js"></script>
+
     </body>
-
-
-    <footer class="footer">
-        <small>&copy; 2020 <strong>Made by Somi</strong></small>
-    </footer>
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Created by Syd D Somi</span>
+    </div>
+</footer>
 </html>
+

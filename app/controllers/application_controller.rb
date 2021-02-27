@@ -5,50 +5,38 @@ class App < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "password_security"
+
   end
+
 
   get '/' do
       erb :home
   end
 
-
-  # post '/login' do
-  #   @user = User.find_by(:email => params[:email])
-  #   if @user != nil && @user.authenticate(params[:password])
-  #     session[:user_id] = @user.id
-  #     redirect '/home'
-  #   end
-  #   erb :error
-  # end
-
-  # get '/register' do
-  #   erb :register
-  # end
-
-  # post '/register' do
-  #   @user = User.new(name: params["name"], email: params["email"], password: params["password"])
-  #   @user.save
-  #   session[:user_id] = @user.id
-
-  #   redirect '/home'
-  # end
-  get "/artists" do
-    @artists = Artist.all
-      erb :"artists/index"
+  get '/error' do
+    erb :error
   end
 
-  get '/back' do
-    redirect back
+  get '/home' do
+    erb :home
   end
 
   helpers do
+
+    def current_user
+      @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+    end
 
     def logged_in?
       !!current_user
     end
 
-    def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    def if_not_logged_in
+      if !logged_in?
+        redirect to "/login"
+      end
     end
+
+
   end
 end

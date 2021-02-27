@@ -1,0 +1,3 @@
+class Reptile < Pet
+    
+end

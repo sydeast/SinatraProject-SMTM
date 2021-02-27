@@ -1,14 +1,64 @@
-<title> Show Me The Money - All Stars - My Dashboard</title>
+<title> All Your Pets - My Dashboard</title>
+<div class="text-center">
+    <h3><%=current_user.name.capitalize%>'s Pets</h3>
+</div>
 
-<h2 class="reroute-text">Welcome <%=current_user.name.capitalize%>!</h2>
-    <div class="grid-container">
-        <div class="lineups_list">
-            <h3>Your Lineups</h3>
+    <div>
+        <div class="birds_list">
+            <h4>Your Birds</h4>
+            <% if current_user.pets.includes(:type).where(type: "Bird")%>
+                <%birds = current_user.pets.where(type: "Bird")%>
+                <%birds.each do |bird|%>
+                <%=bird.name%><br>
+                <%end%>
+            <%end%>
+
         </div>
-        <div class="artists_list">
-            <h3>Your Artists</h3>
+    <div>
+        <div class="cats_list">
+            <% if current_user.pets.includes(:type).where(type: "Cat")%>
+                <h4>Your Cats</h4>
+                <%cats=current_user.pets.where(type: "Cat" )%>
+                    <%cats.each do |cat|%>
+                    <%=cat.name%><br>
+                <%end%>
+            <%end%>
         </div>
-        <div class="user_account">
-            <h3>Your Account</h3>
+    <div>
+        <div class="dogs_list">
+            <% if current_user.pets.includes(:type).where(type: "Dog" )%>
+                <h4>Your Dogs</h4>
+                <%dogs=current_user.pets.where(type: "Dog" )%>
+                    <%dogs.each do |dog|%>
+                        <%=dog.name%><br>
+                            <%end%>
+                                <%end%>
         </div>
-    </div>
+        <div class="reptiles_list">
+            <% if current_user.pets.includes(:type).where(type: "Reptile" )%>
+                <h4>Your Reptiles</h4>
+                <%reptiles=current_user.pets.where(type: "Reptile" )%>
+                    <%reptiles.each do |reptile|%>
+                        <%=reptile.name%><br>
+                            <%end%>
+                                <%end%>
+        </div>
+        <div class="smallpets_list">
+            <% if current_user.pets.includes(:type).where(type: "SmallPet" )%>
+                <h4>Your Small Pets
+                </h4>
+                <%smallpets=current_user.pets.where(type: "SmallPet" )%>
+                    <%smallpets.each do |smallpet|%>
+                        <%=smallpet.name%><br>
+                            <%end%>
+                                <%end%>
+        </div>
+        <div class="others_list">
+            <% if current_user.pets.includes(:type).where(type: "Other" )%>
+                <h4>Your Other Pets</h4>
+                <%others=current_user.pets.where(type: "Other" )%>
+                    <%others.each do |other|%>
+                        <%=other.name%><br>
+                            <%end%>
+                                <%end%>
+        </div>

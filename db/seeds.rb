@@ -1,24 +1,210 @@
-# Add seed data here. Seed your database with `rake db:seed`
-Artist.create(name: "Loco", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/c/cc/Loco_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Loco", season: "Season 1", creator_id: 0)
-Artist.create(name: "Illtong", placed: "Runner-up", photo_url: "https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/209/577/80209577_2_200x200.JPG/dims/resize/Q_80,0", read_only: true, season: "Season 1", creator_id: 0)
-Artist.create(name: "Soul Drive", placed: "Winner", photo_url: "https://i1.jpopasia.com/assets/1/25761-souldive-vedw.jpg", read_only: true, season: "Season 2", creator_id: 0)
-Artist.create(name: "Zizo", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/f/f5/Zizo_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Zizo", season: "Season 2", creator_id: 0)
-Artist.create(name: "Bobby", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/2/29/Bobby_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Bobby", season: "Season 3", creator_id: 0)
-Artist.create(name: "Iron", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/f/f1/Iron_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Iron", season: "Season 3", creator_id: 0)
-Artist.create(name: "Basick", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/c/cf/Basick_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Basick", season: "Season 4", creator_id: 0)
-Artist.create(name: "Mino", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/d/d8/Mino_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Mino", season: "Season 4", creator_id: 0)
-Artist.create(name: "Bewhy", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/4/4d/Bewhy_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Bewhy", season: "Season 5", creator_id: 0)
-Artist.create(name: "C Jamm", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/a/a7/C_jamm_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/C_Jamm", season: "Season 5", creator_id: 0)
-Artist.create(name: "Superbee", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/b/be/Superbee_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Superbee", season: "Season 5", creator_id: 0)
-Artist.create(name: "Hangzoo", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/4/4f/Hangzoo_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Hangzoo", season: "Season 6", creator_id: 0)
-Artist.create(name: "Nucksal", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/2/27/Nucksal_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Nucksal", season: "Season 6", creator_id: 0)
-Artist.create(name: "Loopy", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/1/16/Loopy_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Loopy", season: "Season 7", creator_id: 0)
-Artist.create(name: "Kid Milli", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/8/85/Kid_milli_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Kid_Milli", season: "Season 7", creator_id: 0)
-Artist.create(name: "Punchnello", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/d/d9/Punchnello_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Punchnello", season: "Season 8", creator_id: 0)
-Artist.create(name: "Young B", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/f/fa/Young_b_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Yanghongwon", season: "Season 8", creator_id: 0)
-Artist.create(name: "Lil Boi", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/a/a5/Lil_boi_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Lil_Boi", season: "Season 9", creator_id: 0)
-Artist.create(name: "Mushvenom", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/b/b7/Mushvenom_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Mushvenom", season: "Season 9", creator_id: 0)
-Artist.create(name: "Layone", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/b/bf/Layone_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Layone", season: "Season 9", creator_id: 0)
-Artist.create(name: "Swings", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/0/08/Swings_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Swings", season: "Season 9", creator_id: 0)
-Artist.create(name: "Woo Wonjae", placed: "Runner-up", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/0/0c/Woo_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Woo", season: "Season 6", creator_id: 0)
-Artist.create(name: "Nafla", placed: "Winner", photo_url: "https://static.wikia.nocookie.net/k-hip-hop/images/8/80/Nafla_1.png", read_only: true, profile_url: "https://khiphop.fandom.com/wiki/Nafla", season: "Season 7", creator_id: 0)
+users_seed = [
+    {
+        name: "Amber",
+        email: "amber@atk.com",
+        password: "P3ts!"
+    },
+    {
+        name: "Chungha",
+        email: "chungie93@gmail.com",
+        password: "P3ts!"
+    },
+    {
+        name: "DK",
+        email: "dkdk@atk.com",
+        password: "P3ts!"
+    },
+    {
+        name: "Jennie",
+        email: "09jenn@gmail.com",
+        password: "P3ts!"
+    },
+    {
+        name: "Kai",
+        email: "kaikim@atk.com",
+        password: "P3ts!"
+    },
+    {
+        name: "Lisa",
+        email: "ang94f@atk.com",
+        password: "P3ts!"
+    },
+    {
+        name: "Yesung",
+        email: "yesus_0123@gmail.com",
+        password: "P3ts!"
+    }
+]
+
+pets_seed = [
+    {
+        name: "JackJack",
+        age: "7",
+        type: "Dog",
+        breed: "Chihuahua",
+        gender: "male",
+        neutered_spayed: "true",
+        medical_conditions: "na",
+        weight: "6",
+        wunits: "lbs",
+        owner: "Amber"
+    },
+    {
+
+        name: "Tuna",
+        age: "12",
+        type: "Reptile",
+        breed: "Russian Blue",
+        gender: "Unknown",
+        neutered_spayed: "true",
+        medical_conditions: "heart murmmur",
+        weight: "2",
+        wunits: "lbs",
+        owner: "Amber"
+    },
+    {
+        name: "Bambi",
+        age: "3",
+        type: "Dog",
+        breed: "Pom",
+        gender: "female",
+        neutered_spayed: "false",
+        medical_conditions: "",
+        weight: "4",
+        wunits: "lbs",
+        owner: "Chungha"
+    },
+    {
+        name: "CoCo",
+        age: "11",
+        type: "Bird",
+        breed: "Parrot",
+        gender: "male",
+        neutered_spayed: "false",
+        medical_conditions: "",
+        weight: "2.26",
+        wunits: "kg",
+        owner: "DK"
+    },
+    {
+        name: "Kuma",
+        age: "6",
+        type: "Reptile",
+        breed: "Python",
+        gender: "female",
+        neutered_spayed: "fale",
+        medical_conditions: "allergies",
+        weight: "272",
+        wunits: "kg",
+        owner: "Jennie"
+    },
+    {
+        name: "Kai",
+        age: "30",
+        type: "Other",
+        breed: "Mustang",
+        gender: "male",
+        neutered_spayed: "false",
+        medical_conditions: "funny bone",
+        weight: "1587.57",
+        wunits: "kg",
+        owner: "Jennie"
+    },
+    {
+        name: "Monggu",
+        age: "12",
+        type: "Dog",
+        breed: "Goldendoodle",
+        gender: "male",
+        neutered_spayed: "true",
+        medical_conditions: "",
+        weight: "30",
+        wunits: "lbs",
+        owner: "Kai"
+    },
+    {
+        name: "Jjangah",
+        age: "10",
+        type: "Dog",
+        breed: "Goldendoodle",
+        gender: "female",
+        neutered_spayed: "true",
+        medical_conditions: "",
+        weight: "28",
+        wunits: "lbs",
+        owner: "Kai"
+    },
+    {
+        name: "Jjanggu",
+        age: "10",
+        type: "Dog",
+        breed: "Goldendoodle",
+        gender: "female",
+        neutered_spayed: "true",
+        medical_conditions: "",
+        weight: "28.78",
+        wunits: "lbs",
+        owner: "Kai"
+    },
+    {
+        name: "Leo",
+        age: "9",
+        type: "Cat",
+        breed: "Domestic Shorthair",
+        gender: "male",
+        neutered_spayed: "true",
+        medical_conditions: "",
+        weight: "8",
+        wunits: "lbs",
+        owner: "Lisa"
+    },
+    {
+        name: "Luca",
+        age: "6",
+        type: "Cat",
+        breed: "Persian",
+        gender: "female",
+        neutered_spayed: "true",
+        medical_conditions: "",
+        weight: "9",
+        wunits: "lbs",
+        owner: "Lisa"
+    },
+    {
+        name: "Forever Alone",
+        age: "23",
+        type: "Reptile",
+        breed: "",
+        gender: "female",
+        neutered_spayed: "false",
+        medical_conditions: "",
+        weight: "1",
+        wunits: "kg",
+        owner: "Yesung"
+    }
+
+]
+
+users_seed.each { |user|
+  User.create(
+      name: user[:name],
+      email: user[:email],
+      password: user[:password]
+    )
+}
+
+pets_seed.each { |pet|
+    new_pet = Pet.new(
+        name: pet[:name],
+        age: pet[:age],
+        type: pet[:type],
+        breed: pet[:breed],
+        gender: pet[:gender],
+        neutered_spayed: pet[:neutered_spayed],
+        medical_conditions: pet[:medical_conditions],
+        weight: pet[:weight],
+        wunits: pet[:wunits],
+    )
+    owner = User.find_by(name: pet[:owner])
+    owner.pets << new_pet
+}

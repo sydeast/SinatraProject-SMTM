@@ -1,0 +1,74 @@
+<title>Editing <%=@pet.name.capitalize%>'s Profile </title>
+<div class="text-center">
+    <h3>Editing <%=@pet.name.capitalize%>'s Profile</h3>
+</div>
+<div>
+    <form action="/pets/<%=@pet.id%>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+
+    <div class="pet_information">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="pet[name]" id="name" value="<%=@pet.name%>">
+        </div>
+        <div>
+            <label for="age">Age: </label>
+            <input type="text" name="pet[age]" id="age" value= "<%=@pet.age%>">
+        </div>
+        <div>
+            <label for="type">Type: </label>
+            <select id="type" name="pet[type]" required value= "<%=@pet.type%>">
+                <option value="Bird">Bird</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Other">Other</option>
+                <option value="Reptile">Reptile</option>
+                <option value="SmallPet">Small Pet</option>
+            </select>
+        </div>
+        <div>
+            <label for="breed">Breed: </label>
+            <input type="text" name="pet[breed]" id="breed"  value= "<%=@pet.breed%>">
+        </div>
+        <div>
+            <label for="gender">Gender: </label>
+            <select id="type" name="pet[gender]" id="gender" value= "<%=@pet.gender%>">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="unknown">Unknown</option>
+            </select>
+        </div>
+        <div>
+            <label for="neutered_spayed">Spayed/Neutered?: </label>
+            <input type="checkbox" name="pet[neutered_spayed]" id="neutered_spayed" value= "<%=@pet.neutered_spayed%>">
+        </div>
+        <div>
+            <label for="weight">Weight: </label>
+            <input type="text" name="pet[weight]" id="weight" value= "<%=@pet.weight%>" required>
+            <select id="wunits" name="pet[wunits]" id="wunits" required value="<%=@pet.wunits%>">
+                <option value="">--</option>
+                <option value="lbs">lbs</option>
+                <option value="kg">kg</option>
+            </select>
+        </div>
+        <div>
+            <label for="medical_conditions">Medical Conditions: </label>
+            <textarea name="pet[medical_conditions]" id="medical_conditions" value= "<%=@pet.medical_conditions%>">
+            </textarea>
+        </div>
+    </div>
+
+        <button class="btn btn-success" type="submit" value="Submit">Save Pet</button>
+        <button class="btn btn-link" onclick="location.href='/pets/<%=@pet.id%>'" type="button">Cancel Editing</button>
+
+  </form>
+</div>
+<br>
+<div>
+    <p>Note: Clicking "Remove Pet" will permenantly delete this record of your pet without confirmation.<br>  </p>
+    <form action="/pets/<%=@pet.id%>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input  class="btn btn-danger btn-sm" type="submit" value="Remove Pet">
+    </form>
+</div>

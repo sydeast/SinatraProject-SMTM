@@ -1,0 +1,19 @@
+<title>All Your Furbabies</title>
+
+<div class="text-center">
+        <h3>Your All Star Pet Babies!!</h3>
+</div>
+<div>
+        <a href="/pets/new">Create New pet</a>
+</div>
+<div>
+        <ol>
+                <%@pets.each.with_index(1) do |pet|%>
+                        <li>
+                                <a href="/pets/<%=pet.id%>">
+                                        <%=pet.name.capitalize%>
+                                </a>
+                        </li>
+                        <%end%>
+        </ol>
+</div>
