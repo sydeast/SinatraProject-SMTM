@@ -26,13 +26,11 @@ class UserController < App
 
 
   post '/register' do
+    if_not_logged_in
     user = User.new(name: params[:name], email: params[:email], password: params[:password])
     if User.find_by(email: params[:email])
       @error = "Email already taken. Please login or use another email address."
-      # redirect back
-    # elsif params[:password] != params[:confirm_password]
-    #   @error = "Passwords do not match. Please re-enter passwords."
-      # redirect back
+      redirect '/register'
     else
       user.save
       session[:user_id] = user.id
@@ -45,19 +43,24 @@ class UserController < App
         redirect to '/'
     end
 
-    get '/users' do
-    if !logged_in?
-        redirect to '/login'
-    end
-    @users = User.all
-    erb :"users/index"
+  get '/users/account' do
+    if_not_logged_in
+    erb :'users/account'
+  end
+
+
+  delete '/users/account' do
+    if_not_logged_in
+    current_user.pets.each do |pet|
+        pet.delete
+      end
+    current_user.delete
+    redirect to '/register'
   end
 
 
   get '/users/:id' do
-    if !logged_in?
-        redirect to '/login'
-    end
+    if_not_logged_in
     @user = User.find_by_id(params[:id])
     erb :"users/show"
   end

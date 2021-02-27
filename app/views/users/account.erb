@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="text-center">
+    <h3><%=current_user.name.capitalize%>'s Account Page</h3>
+    <p>Keep your eye on the ball! If you cannot right now that's okay!<br> You have one option and it's permanent with NO CONFIRMATION: </p>
+    <form action="/users/account" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <label for="submit">Do you want to delete your account? </label><br>
+        <input type="submit" value="DELETE ACCOUNT">
+    </form>
+</div>
+</html>

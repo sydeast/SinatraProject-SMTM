@@ -1,6 +1,5 @@
 class PetController < App
 
-
     get '/pets' do
         if_not_logged_in
         @pets = current_user.pets

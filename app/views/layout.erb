@@ -57,7 +57,7 @@
                         </div>
                         <div>
                             <% if logged_in?%>
-                            <p>Hi, <%=current_user.name.capitalize%></p>
+                            <p>Hi, <a href="/users/account"><%=current_user.name.capitalize%></a></p>
                             <% else %>
                             <p>Hi! Join us today!</p>
                             <% end %>
