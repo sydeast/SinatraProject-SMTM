@@ -7,7 +7,7 @@ This growing webapp is a Sinatra based application built to track your pets prof
 Clone the repo to your machine and run below command in your terminal to install all gems and their dependencies
 `bundle install`
 
-Next run the migration and seed files. If installing for personal use, run the second command as you will not need seeded data.
+Next run the migration and seed files. If installing for personal use, run the second command as you will not need seeded data. Passwords for the accounts are in the seed file. 
 Development: (note: Rake Setup command will reset any data current in the database)
 `rake db:setup`
 

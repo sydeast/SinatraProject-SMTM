@@ -1,3 +1,3 @@
-class Other
-    
+class Other < Pet
+
 end
