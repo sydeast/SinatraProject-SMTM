@@ -17,6 +17,10 @@ class App < Sinatra::Base
     erb :error
   end
 
+  get '/home' do
+    erb :home
+  end
+
   helpers do
 
     def current_user

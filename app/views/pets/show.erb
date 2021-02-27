@@ -1,39 +1,27 @@
+<title><%=@pet.name.capitalize%>'s Profile</title>
 <div>
-<h1>Your All Star Pet</h1>
 
-<h2><%=@pet.name.capitalize%></h2>
+<h4><%=@pet.name.capitalize%>'s Profile</h4>
 
-<p>
-    Type: <%=@pet.type%><br>
-    Age: <%=@pet.age%><br>
-    Weight: <%=@pet.weight%><%=@pet.wunits%><br>
-    Breed: <%=@pet.breed%><br>
-    Gender: <%=@pet.gender%><br>
-    Spayed/Neutered?:
-    <% if @pet.neutered_spayed %>
-        <%= "Yes" %>
-    <% else %>
-    <%= "No" %>
-    <% end %><br>
-    Medical Conditions: <%=@pet.medical_conditions%>
-</p>
+<div>
+    <p>
+        Type: <%=@pet.type%><br>
+        Age: <%=@pet.age%><br>
+        Weight: <%=@pet.weight%><%=@pet.wunits%><br>
+        Breed: <%=@pet.breed%><br>
+        Gender: <%=@pet.gender%><br>
+        Spayed/Neutered?:
+        <% if @pet.neutered_spayed %>
+            <%= "Yes" %>
+        <% else %>
+        <%= "No" %>
+        <% end %><br>
+        Medical Conditions: <%=@pet.medical_conditions%>
+    </p>
+</div>
 
+<div>
+    <a href="/pets/<%=@pet.id%>/edit" class="btn btn-primary">Edit <%=@pet.name.capitalize%></a>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="/pets/<%=@pet.id%>/edit" class="btn btn-primary">Edit pet</a>
 </div>

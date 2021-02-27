@@ -1,15 +1,18 @@
 <title> All Your Pets - My Dashboard</title>
+<div class="text-center">
+    <h3><%=current_user.name.capitalize%>'s Pets</h3>
+</div>
 
-<h3><%=current_user.name.capitalize%>'s Pets</h3>
     <div>
         <div class="birds_list">
+            <h4>Your Birds</h4>
             <% if current_user.pets.includes(:type).where(type: "Bird")%>
-                <h4>Your Birds</h4>
                 <%birds = current_user.pets.where(type: "Bird")%>
                 <%birds.each do |bird|%>
                 <%=bird.name%><br>
                 <%end%>
             <%end%>
+
         </div>
     <div>
         <div class="cats_list">
