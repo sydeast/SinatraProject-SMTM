@@ -61,12 +61,12 @@ class PetController < App
     end
 
     def get_pet
-        @pet = Pet.find(params[:id])
+        @pet = Pet.find_by(id: params[:id])
     end
 
     def if_not_allowed
         get_pet
-        if @pet.user_id != current_user.id
+        if @pet.nil? || @pet.user_id != current_user.id
             redirect '/error'
         end
     end

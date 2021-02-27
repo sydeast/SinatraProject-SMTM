@@ -17,6 +17,9 @@ class App < Sinatra::Base
     erb :error
   end
 
+  error ActiveRecord::RecordNotFound do
+    redirect '/'
+  end
 
   helpers do
 
