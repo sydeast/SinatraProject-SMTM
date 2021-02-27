@@ -53,9 +53,14 @@
                                     <a class="nav-link" href="/register">Register</a>
                                 </li>
                                 <% end %>
-
-
                             </ul>
+                        </div>
+                        <div>
+                            <% if logged_in?%>
+                            <p>Hi, <%=current_user.name.capitalize%></p>
+                            <% else %>
+                            <p>Hi! Join us today!</p>
+                            <% end %>
                         </div>
              </nav>
         </header>
