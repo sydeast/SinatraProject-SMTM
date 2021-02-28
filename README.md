@@ -1,4 +1,5 @@
 # SinatraProject-Somi Pet Manager
+[![license](https://img.shields.io/github/license/sydeast/SinatraProject-SMTM.svg?style=flat-square)](https://github.com/sydeast/SinatraProject-SMTM/blob/main/LICENSE)
 Flatiron Sintra Project Assessment - Somi's Pet Manager
 
 This growing webapp is a Sinatra based application built to track your pets profile including weight and medical conditions. The application was built using Sinatra, Ruby, HTML/CSS, and various RubyGems.
@@ -7,7 +8,7 @@ This growing webapp is a Sinatra based application built to track your pets prof
 Clone the repo to your machine and run below command in your terminal to install all gems and their dependencies
 `bundle install`
 
-Next run the migration and seed files. If installing for personal use, run the second command as you will not need seeded data. Passwords for the accounts are in the seed file. 
+Next run the migration and seed files. If installing for personal use, run the second command as you will not need seeded data. Passwords for the accounts are in the seed file.
 Development: (note: Rake Setup command will reset any data current in the database)
 `rake db:setup`
 
@@ -32,10 +33,6 @@ Currently this project is an assignment for my course. Once completed, the proje
 * Breeds Dropdown Database - multiple databases of various breeds of our furry, feathered, and scaly friends for better organization
 * Pet Images - Upload a picture of your furbabies to their profiles
 * Account Settings - Update your own name, email, and passwords
-
-## Licence
-(LICENSE)
-
 
 
 
