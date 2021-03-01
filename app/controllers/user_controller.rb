@@ -2,14 +2,14 @@ class UserController < App
 
   get '/login' do
     if logged_in?
-        redirect to "/users/#{current_user.id}"
+        redirect to "/users/show"
     end
     erb :"users/login"
   end
 
   get '/register' do
     if logged_in?
-        redirect to "/users/#{current_user.id}"
+        redirect to "/users/show"
     end
     erb :"users/register"
   end
@@ -26,7 +26,7 @@ class UserController < App
 
 
   post '/register' do
-    if_not_logged_in
+    
     user = User.new(name: params[:name], email: params[:email], password: params[:password])
     if User.find_by(email: params[:email])
       @error = "Email already taken. Please login or use another email address."
@@ -65,6 +65,6 @@ class UserController < App
     erb :"users/show"
   end
 
- 
+
 
 end
